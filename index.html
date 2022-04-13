@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>login</title>
+</head>
+<body>
+
+
+    <header id="top">
+        <nav>
+           <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#">BitPlease</a>
+                <a href="#">Join us</a>
+                <a href="#">Sign in</a>
+                <a href="#">Product Management</a>
+                <a href="#">Product Design</a>
+                <a href="#">UI/UX design</a>
+                <a href="#">Front-End Development</a>
+                <a href="#">Back-End Development</a>
+            </div>
+            <div class="header-nav">
+                <ul>
+                    <li onclick="openNav()" id="menu"> 
+                    
+                    </li>
+                  <li>
+                    <h1>Bits<span>  Please </span></h1>
+                  </li>
+                        
+                    <div class="rightnav">
+                        <li class="rm">FAQ</li>
+                        <li class="join-us"><button>Join us</button></li>
+                    </div>
+                </ul>
+            </div>
+
+        </nav>
+    </header>
+<!-- =========nav end============== -->
+
+
+    
+    <div class="container">
+
+        <div class="container-text" >
+            <div class="intro-text">
+                <h2>
+                    Transition into the world of IT easily with Us.
+                </h2>
+                <p class="text-p">
+                    We have a step-by-step guide, dedicated mentors, curious learners and resources to help you achieve your goals. 
+                </p>
+                <div class="btn"> 
+                    <button class="act-btn sign-btn" onclick="signIn()"> <a href="#">Sign in</a>  </button>
+                    <form method="post"login action="./sinup.html">
+                        <button class="act-btn join-btn" onclick="signUp()"><a href="./login.html"> Join us now</a></button>
+                    </form>
+                </div>
+                <div class="chat">
+                    <p>We know you want to chat, what is it about?</p>
+                </div>
+            </div>
+            <div class="chat-img">
+                <img src="./assets/sideImage.png" alt="">
+            </div>
+
+        </div>  
+   
+<!-- ========sign in========== -->
+
+
+
+<div class="containersignin">
+    <nav class="navsignin"> 
+        <h2 id="welcome">Welcome back Fellow!</h2> 
+        <button id="cancelbutton" onclick="closeForm()">X</button></br>
+    </nav>
+    <div class="form-all-group">
+        <div class="form">
+            <form action="">
+            <div class="form-group">
+                <p class="text">Email Address</p>
+                <input type="text" class="input-box" name="email" placeholder="Enter your email address">
+            </div>
+            <div class="form-group">
+                <p class="text">Password</p>
+                <input type="password" class="input-box" name="password" placeholder="Create password">
+            </div>
+            <p  class="pass">Forgot password?</p>
+            <button class="just-btn">Login</button>
+            </form>
+        </div>
+
+        <div class="fellow">
+            <p>Alternatively</p>
+            <button class="google-btn"> 
+                 Continue with Google
+                </button>
+            <p>Not yet a fellow? <span><a href=""> Join Us</a></span></p>
+            <p><span><a href="">Forgot Password?</a></span></p>
+        </div>
+    </div>
+
+</div>
+<!-- ========sign in end======= -->
+<script>
+
+    const menu = document.querySelector('#menu');
+    menu.style.backgroundImage
+
+
+ function openNav() {
+  document.getElementById("mySidenav").style.transform = `translateX(${0}px)`;
+  document.querySelector(".sidenav").style.opacity = 1;
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.transform = "translateX(-250px)";
+    document.querySelector(".sidenav").style.opacity = 0;
+}
+
+function signIn() {
+    document.querySelector('.containersignin').style.display = "block";
+}
+
+function signUp() {
+    console.log("sign up")
+}
+function closeForm() {
+    document.querySelector('.containersignin').style.display ="none";
+}
+</script>
+</body>
+</html>
